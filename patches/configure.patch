@@ -1,0 +1,53 @@
+--- src/configure.orig	2025-03-04 12:18:44.183450434 +0100
++++ src/configure	2025-03-04 12:19:03.243557162 +0100
+@@ -59977,6 +59977,11 @@ $as_echo "$lt_cv_irix_exported_symbol" >
+       hardcode_shlibpath_var=no
+       ;;
+ 
++    genode*)
++      archive_cmds='$CC $libobjs $deplibs '$LDLIBS_SHARED' -o $lib'
++      archive_expsym_cmds=''
++      ;;
++
+     *)
+       ld_shlibs=no
+       ;;
+@@ -61048,6 +61053,13 @@ uts4*)
+   shlibpath_var=LD_LIBRARY_PATH
+   ;;
+ 
++genode*)
++  dynamic_linker="Genode ld.lib.so"
++  shrext_cmds=.lib.so
++  libname_spec='$name'
++  library_names_spec='$libname$shared_ext'
++  ;;
++
+ *)
+   dynamic_linker=no
+   ;;
+@@ -63320,6 +63332,10 @@ fi
+         ld_shlibs_CXX=no
+         ;;
+ 
++      genode*)
++        ld_shlibs_CXX=yes
++      	;;
++
+       *)
+         # FIXME: insert proper C++ library support
+         ld_shlibs_CXX=no
+@@ -65013,6 +65029,13 @@ uts4*)
+   shlibpath_var=LD_LIBRARY_PATH
+   ;;
+ 
++genode*)
++  dynamic_linker="Genode ld.lib.so"
++  shrext_cmds=.lib.so
++  libname_spec='$name'
++  library_names_spec='$libname$shared_ext'
++  #dynamic_linker=yes
++  ;;
+ *)
+   dynamic_linker=no
+   ;;
