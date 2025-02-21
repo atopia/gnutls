@@ -1,10 +1,10 @@
---- src/Makefile.in.orig	2025-02-25 10:29:14.331001141 +0100
-+++ src/Makefile.in	2025-02-25 10:31:47.527433916 +0100
+--- src/Makefile.in.orig	2025-03-05 14:07:20.548374703 +0100
++++ src/Makefile.in	2025-03-05 14:08:44.413126221 +0100
 @@ -1688,6 +1688,8 @@ ABICHECK_COMMON = --no-added-syms
  @CODE_COVERAGE_ENABLED_TRUE@AM_DISTCHECK_CONFIGURE_FLAGS = $(AM_DISTCHECK_CONFIGURE_FLAGS) --disable-code-coverage
  all: config.h
  	$(MAKE) $(AM_MAKEFLAGS) all-recursive
-+	@cp $(builddir)/lib/.libs/libgnutls.so gnutls.lib.so
++	@cp $(builddir)/lib/.libs/gnutls.lib.so gnutls.lib.so
 +
  
  .SUFFIXES:
