@@ -9,5 +9,5 @@ URL(gnutls) := https://www.gnupg.org/ftp/gcrypt/gnutls/v$(VERSION_MAJOR).$(VERSI
 SHA(gnutls) := 1b79b381ac283d8b054368b335c408fedcb9b7144e0c07f531e3537d4328f3b3
 DIR(gnutls) := src
 
-PATCHES := $(addprefix patches/, configure.patch Makefile.in.patch)
+PATCHES := $(addprefix patches/, configure.patch Makefile.in.patch gnutls.pc.in.patch)
 PATCH_OPT := -p1 -d src
